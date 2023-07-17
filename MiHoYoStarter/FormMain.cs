@@ -8,17 +8,20 @@ using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Web.Script.Serialization;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace MiHoYoStarter
 {
     public partial class FormMain : Form
     {
-
+        private bool allowshowdisplay = false;
+        private string LEFTORRIGHT;
         private GameFormControl genshinFormControl = new GameFormControl("原神", "原神", "Genshin", "YuanShen");
         private GameFormControl genshinCloudFormControl = new GameFormControl("云·原神", "云原神", "GenshinCloud", "Genshin Impact Cloud Game");
         private GameFormControl starRailFormControl = new GameFormControl("崩坏：星穹铁道", "崩铁", "StarRail", "StarRail");
@@ -27,10 +30,17 @@ namespace MiHoYoStarter
         public FormMain()
         {
             InitializeComponent();
+            this.Opacity = 0;
         }
 
         private void FormMain_Load(object sender, EventArgs e)
         {
+
+            BeginInvoke(new MethodInvoker(delegate
+            {
+                Hide(); 
+                this.Opacity = 1;
+            }));
             // 标题加上版本号
             var version = HuiUtils.GetMyVersion();
             this.Text += version;
@@ -58,6 +68,13 @@ namespace MiHoYoStarter
             chkHonkaiImpact3AutoStart.Checked = Properties.Settings.Default.HonkaiImpact3AutoStartEnabled;
 
             RefreshTab();
+            if (lvwGenshinAcct.Items.Count > 0) { 
+            lvwGenshinAcct.HideSelection = false;
+            //ListView1失去焦点，当前选中的项也会突出显示，这样防止ListView1选择的行无法显示
+            lvwGenshinAcct.Items[0].Selected = true;
+            //将ListView1的选中第一行。其中[0]代表第一行，第一行从0开始。第二行为1，以此类推
+            lvwGenshinAcct.Columns[0].Width = 200;
+            }
         }
 
         public void RefreshNotifyIconContextMenu()
@@ -106,9 +123,34 @@ namespace MiHoYoStarter
                 this.ShowInTaskbar = true;
                 this.Visible = true;
             }
+            this.Show();
             this.Activate();
         }
+        private void notifyIcon_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                LEFTORRIGHT = "left";
+            }
+            if (e.Button == MouseButtons.Right)
+            {
+                LEFTORRIGHT = "right";
+            }
+        }
+        private void notifyIcon_Click(object sender, EventArgs e)
+        {
+            if (LEFTORRIGHT == "left")
+            {
+                //notifyIcon_DoubleClick(sender, e);
 
+                MethodInfo mi = typeof(NotifyIcon).GetMethod("ShowContextMenu",BindingFlags.Instance | BindingFlags.NonPublic);
+                mi.Invoke(notifyIcon, null);
+            }
+            if (LEFTORRIGHT == "right")
+            {
+
+            }
+        }
         private void btnStarRailFPSEdit_Click(object sender, EventArgs e)
         {
             try
@@ -299,6 +341,42 @@ namespace MiHoYoStarter
             }
             else {
                 starRailFormControl.IsOversea = true;
+            }
+        }
+
+        private void lvwGenshinAcct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lvwGenshinAcct_ColumnWidthChanging(object sender, ColumnWidthChangingEventArgs e)
+        {
+
+        }
+
+        private void lvwGenshinAcct_MouseUp(object sender, MouseEventArgs e)
+        {
+
+
+            if (e.Button == MouseButtons.Left)
+            {
+                if (lvwGenshinAcct.SelectedItems.Count > 0)
+                {
+                    //listView1.Items[listView1.SelectedIndices[0]].Index
+
+
+                }
+                else if (lvwGenshinAcct.SelectedItems.Count <= 0)//点击空白区  
+                {
+                    if (this.lvwGenshinAcct.FocusedItem != null)
+                    {
+                        ListViewItem item = this.lvwGenshinAcct.GetItemAt(e.X, e.Y);
+                        if (item == null)
+                        {
+                            this.lvwGenshinAcct.FocusedItem.Selected = true;
+                        }
+                    }
+                }
             }
         }
 

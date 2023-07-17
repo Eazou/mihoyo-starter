@@ -1,4 +1,7 @@
-﻿namespace MiHoYoStarter
+﻿using System;
+using System.Windows.Forms;
+
+namespace MiHoYoStarter
 {
     partial class FormMain
     {
@@ -64,6 +67,7 @@
             this.numericUpDownFPS = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.comboStarRailServer = new System.Windows.Forms.ComboBox();
             this.btnStarRailStart = new System.Windows.Forms.Button();
             this.chkStarRailAutoStart = new System.Windows.Forms.CheckBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -109,7 +113,6 @@
             this.tipHelp = new System.Windows.Forms.ToolTip(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.comboStarRailServer = new System.Windows.Forms.ComboBox();
             this.tab1.SuspendLayout();
             this.tabPageGenshin.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -137,22 +140,22 @@
             this.tab1.Controls.Add(this.tabPageSatrRail);
             this.tab1.Controls.Add(this.tabPageHonkaiImpact3);
             this.tab1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tab1.Location = new System.Drawing.Point(0, 31);
-            this.tab1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tab1.Location = new System.Drawing.Point(0, 28);
+            this.tab1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tab1.Name = "tab1";
             this.tab1.SelectedIndex = 0;
-            this.tab1.Size = new System.Drawing.Size(574, 725);
+            this.tab1.Size = new System.Drawing.Size(462, 408);
             this.tab1.TabIndex = 0;
             // 
             // tabPageGenshin
             // 
             this.tabPageGenshin.BackColor = System.Drawing.Color.White;
             this.tabPageGenshin.Controls.Add(this.groupBox1);
-            this.tabPageGenshin.Location = new System.Drawing.Point(4, 28);
-            this.tabPageGenshin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageGenshin.Location = new System.Drawing.Point(4, 25);
+            this.tabPageGenshin.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageGenshin.Name = "tabPageGenshin";
-            this.tabPageGenshin.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPageGenshin.Size = new System.Drawing.Size(566, 693);
+            this.tabPageGenshin.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabPageGenshin.Size = new System.Drawing.Size(454, 379);
             this.tabPageGenshin.TabIndex = 0;
             this.tabPageGenshin.Text = "原神";
             // 
@@ -173,11 +176,11 @@
             this.groupBox1.Controls.Add(this.btnGenshinSwitch);
             this.groupBox1.Controls.Add(this.btnGenshinAdd);
             this.groupBox1.Controls.Add(this.lvwGenshinAcct);
-            this.groupBox1.Location = new System.Drawing.Point(12, 9);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Location = new System.Drawing.Point(11, 8);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox1.Size = new System.Drawing.Size(536, 635);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox1.Size = new System.Drawing.Size(428, 333);
             this.groupBox1.TabIndex = 39;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "账号切换";
@@ -186,9 +189,10 @@
             // 
             this.chkGenshinAutoStart.AutoSize = true;
             this.chkGenshinAutoStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkGenshinAutoStart.Location = new System.Drawing.Point(394, 498);
+            this.chkGenshinAutoStart.Location = new System.Drawing.Point(149, 83);
+            this.chkGenshinAutoStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkGenshinAutoStart.Name = "chkGenshinAutoStart";
-            this.chkGenshinAutoStart.Size = new System.Drawing.Size(124, 22);
+            this.chkGenshinAutoStart.Size = new System.Drawing.Size(104, 19);
             this.chkGenshinAutoStart.TabIndex = 39;
             this.chkGenshinAutoStart.Text = "切换时重启";
             this.chkGenshinAutoStart.UseVisualStyleBackColor = true;
@@ -197,10 +201,10 @@
             // 
             this.picHelpSatrtParam.Image = global::MiHoYoStarter.Properties.Resources.attention;
             this.picHelpSatrtParam.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.picHelpSatrtParam.Location = new System.Drawing.Point(114, 100);
-            this.picHelpSatrtParam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picHelpSatrtParam.Location = new System.Drawing.Point(101, 83);
+            this.picHelpSatrtParam.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.picHelpSatrtParam.Name = "picHelpSatrtParam";
-            this.picHelpSatrtParam.Size = new System.Drawing.Size(24, 24);
+            this.picHelpSatrtParam.Size = new System.Drawing.Size(21, 20);
             this.picHelpSatrtParam.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picHelpSatrtParam.TabIndex = 38;
             this.picHelpSatrtParam.TabStop = false;
@@ -211,10 +215,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label2.Location = new System.Drawing.Point(22, 104);
+            this.label2.Location = new System.Drawing.Point(20, 87);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 18);
+            this.label2.Size = new System.Drawing.Size(82, 15);
             this.label2.TabIndex = 37;
             this.label2.Text = "启动参数：";
             // 
@@ -222,30 +226,30 @@
             // 
             this.txtGenshinStartParam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGenshinStartParam.Location = new System.Drawing.Point(21, 126);
-            this.txtGenshinStartParam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGenshinStartParam.Location = new System.Drawing.Point(19, 105);
+            this.txtGenshinStartParam.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtGenshinStartParam.Name = "txtGenshinStartParam";
-            this.txtGenshinStartParam.Size = new System.Drawing.Size(504, 29);
+            this.txtGenshinStartParam.Size = new System.Drawing.Size(400, 25);
             this.txtGenshinStartParam.TabIndex = 36;
             // 
             // txtGenshinPath
             // 
             this.txtGenshinPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGenshinPath.Location = new System.Drawing.Point(21, 63);
-            this.txtGenshinPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGenshinPath.Location = new System.Drawing.Point(19, 52);
+            this.txtGenshinPath.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtGenshinPath.Name = "txtGenshinPath";
-            this.txtGenshinPath.Size = new System.Drawing.Size(444, 29);
+            this.txtGenshinPath.Size = new System.Drawing.Size(347, 25);
             this.txtGenshinPath.TabIndex = 33;
             // 
             // lblPathTag
             // 
             this.lblPathTag.AutoSize = true;
             this.lblPathTag.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.lblPathTag.Location = new System.Drawing.Point(22, 40);
+            this.lblPathTag.Location = new System.Drawing.Point(20, 33);
             this.lblPathTag.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPathTag.Name = "lblPathTag";
-            this.lblPathTag.Size = new System.Drawing.Size(206, 18);
+            this.lblPathTag.Size = new System.Drawing.Size(172, 15);
             this.lblPathTag.TabIndex = 32;
             this.lblPathTag.Text = "【原神】游戏程序路径：";
             // 
@@ -253,10 +257,10 @@
             // 
             this.btnGenshinChoosePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinChoosePath.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinChoosePath.Location = new System.Drawing.Point(476, 60);
-            this.btnGenshinChoosePath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinChoosePath.Location = new System.Drawing.Point(375, 50);
+            this.btnGenshinChoosePath.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnGenshinChoosePath.Name = "btnGenshinChoosePath";
-            this.btnGenshinChoosePath.Size = new System.Drawing.Size(51, 34);
+            this.btnGenshinChoosePath.Size = new System.Drawing.Size(45, 28);
             this.btnGenshinChoosePath.TabIndex = 34;
             this.btnGenshinChoosePath.Text = "...";
             this.btnGenshinChoosePath.UseVisualStyleBackColor = true;
@@ -265,10 +269,10 @@
             // 
             this.btnGenshinDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinDelete.Location = new System.Drawing.Point(392, 574);
-            this.btnGenshinDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinDelete.Location = new System.Drawing.Point(300, 285);
+            this.btnGenshinDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnGenshinDelete.Name = "btnGenshinDelete";
-            this.btnGenshinDelete.Size = new System.Drawing.Size(135, 36);
+            this.btnGenshinDelete.Size = new System.Drawing.Size(120, 30);
             this.btnGenshinDelete.TabIndex = 28;
             this.btnGenshinDelete.Text = "删除选中账号";
             this.btnGenshinDelete.UseVisualStyleBackColor = true;
@@ -277,9 +281,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label1.Location = new System.Drawing.Point(22, 182);
+            this.label1.Location = new System.Drawing.Point(20, 152);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(134, 18);
+            this.label1.Size = new System.Drawing.Size(112, 15);
             this.label1.TabIndex = 27;
             this.label1.Text = "保存账号列表：";
             // 
@@ -287,10 +291,10 @@
             // 
             this.btnGenshinSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinSwitch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinSwitch.Location = new System.Drawing.Point(392, 202);
-            this.btnGenshinSwitch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinSwitch.Location = new System.Drawing.Point(300, 168);
+            this.btnGenshinSwitch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnGenshinSwitch.Name = "btnGenshinSwitch";
-            this.btnGenshinSwitch.Size = new System.Drawing.Size(135, 62);
+            this.btnGenshinSwitch.Size = new System.Drawing.Size(120, 75);
             this.btnGenshinSwitch.TabIndex = 26;
             this.btnGenshinSwitch.Text = "切换选中账号";
             this.btnGenshinSwitch.UseVisualStyleBackColor = true;
@@ -299,45 +303,52 @@
             // 
             this.btnGenshinAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinAdd.Location = new System.Drawing.Point(392, 530);
-            this.btnGenshinAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinAdd.Location = new System.Drawing.Point(299, 249);
+            this.btnGenshinAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnGenshinAdd.Name = "btnGenshinAdd";
-            this.btnGenshinAdd.Size = new System.Drawing.Size(135, 36);
+            this.btnGenshinAdd.Size = new System.Drawing.Size(120, 30);
             this.btnGenshinAdd.TabIndex = 25;
             this.btnGenshinAdd.Text = "保存当前账号";
             this.btnGenshinAdd.UseVisualStyleBackColor = true;
             // 
             // lvwGenshinAcct
             // 
+            this.lvwGenshinAcct.Activation = System.Windows.Forms.ItemActivation.OneClick;
             this.lvwGenshinAcct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lvwGenshinAcct.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.name});
-            this.lvwGenshinAcct.GridLines = true;
+            this.lvwGenshinAcct.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lvwGenshinAcct.Font = new System.Drawing.Font("宋体", 12F);
+            this.lvwGenshinAcct.FullRowSelect = true;
             this.lvwGenshinAcct.HideSelection = false;
-            this.lvwGenshinAcct.Location = new System.Drawing.Point(21, 202);
+            this.lvwGenshinAcct.HoverSelection = true;
+            this.lvwGenshinAcct.Location = new System.Drawing.Point(19, 168);
+            this.lvwGenshinAcct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvwGenshinAcct.MultiSelect = false;
             this.lvwGenshinAcct.Name = "lvwGenshinAcct";
-            this.lvwGenshinAcct.Size = new System.Drawing.Size(361, 411);
+            this.lvwGenshinAcct.Size = new System.Drawing.Size(273, 147);
             this.lvwGenshinAcct.TabIndex = 24;
             this.lvwGenshinAcct.UseCompatibleStateImageBehavior = false;
-            this.lvwGenshinAcct.View = System.Windows.Forms.View.List;
+            this.lvwGenshinAcct.View = System.Windows.Forms.View.Details;
+            this.lvwGenshinAcct.SelectedIndexChanged += new System.EventHandler(this.lvwGenshinAcct_SelectedIndexChanged);
+            this.lvwGenshinAcct.MouseUp += new System.Windows.Forms.MouseEventHandler(this.lvwGenshinAcct_MouseUp);
             // 
             // name
             // 
             this.name.Text = "名称";
-            this.name.Width = 273;
+            this.name.Width = 200;
             // 
             // tabPageGenshinCloud
             // 
             this.tabPageGenshinCloud.BackColor = System.Drawing.Color.White;
             this.tabPageGenshinCloud.Controls.Add(this.groupBox6);
-            this.tabPageGenshinCloud.Location = new System.Drawing.Point(4, 28);
-            this.tabPageGenshinCloud.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageGenshinCloud.Location = new System.Drawing.Point(4, 25);
+            this.tabPageGenshinCloud.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageGenshinCloud.Name = "tabPageGenshinCloud";
-            this.tabPageGenshinCloud.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPageGenshinCloud.Size = new System.Drawing.Size(566, 693);
+            this.tabPageGenshinCloud.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabPageGenshinCloud.Size = new System.Drawing.Size(454, 379);
             this.tabPageGenshinCloud.TabIndex = 1;
             this.tabPageGenshinCloud.Text = "云·原神";
             // 
@@ -355,11 +366,11 @@
             this.groupBox6.Controls.Add(this.btnGenshinCloudSwitch);
             this.groupBox6.Controls.Add(this.btnGenshinCloudAdd);
             this.groupBox6.Controls.Add(this.lvwGenshinCloudAcct);
-            this.groupBox6.Location = new System.Drawing.Point(12, 9);
-            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox6.Location = new System.Drawing.Point(11, 8);
+            this.groupBox6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox6.Size = new System.Drawing.Size(536, 635);
+            this.groupBox6.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox6.Size = new System.Drawing.Size(476, 529);
             this.groupBox6.TabIndex = 43;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "账号切换";
@@ -368,9 +379,10 @@
             // 
             this.chkGenshinCloudAutoStart.AutoSize = true;
             this.chkGenshinCloudAutoStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkGenshinCloudAutoStart.Location = new System.Drawing.Point(394, 498);
+            this.chkGenshinCloudAutoStart.Location = new System.Drawing.Point(350, 415);
+            this.chkGenshinCloudAutoStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkGenshinCloudAutoStart.Name = "chkGenshinCloudAutoStart";
-            this.chkGenshinCloudAutoStart.Size = new System.Drawing.Size(124, 22);
+            this.chkGenshinCloudAutoStart.Size = new System.Drawing.Size(104, 19);
             this.chkGenshinCloudAutoStart.TabIndex = 41;
             this.chkGenshinCloudAutoStart.Text = "切换时重启";
             this.chkGenshinCloudAutoStart.UseVisualStyleBackColor = true;
@@ -379,20 +391,20 @@
             // 
             this.txtGenshinCloudPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtGenshinCloudPath.Location = new System.Drawing.Point(21, 63);
-            this.txtGenshinCloudPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGenshinCloudPath.Location = new System.Drawing.Point(19, 52);
+            this.txtGenshinCloudPath.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtGenshinCloudPath.Name = "txtGenshinCloudPath";
-            this.txtGenshinCloudPath.Size = new System.Drawing.Size(444, 29);
+            this.txtGenshinCloudPath.Size = new System.Drawing.Size(395, 25);
             this.txtGenshinCloudPath.TabIndex = 33;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label5.Location = new System.Drawing.Point(22, 40);
+            this.label5.Location = new System.Drawing.Point(20, 33);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(228, 18);
+            this.label5.Size = new System.Drawing.Size(202, 15);
             this.label5.TabIndex = 32;
             this.label5.Text = "【云·原神】游戏程序路径：";
             // 
@@ -400,10 +412,10 @@
             // 
             this.btnGenshinCloudChoosePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinCloudChoosePath.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinCloudChoosePath.Location = new System.Drawing.Point(476, 60);
-            this.btnGenshinCloudChoosePath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinCloudChoosePath.Location = new System.Drawing.Point(423, 50);
+            this.btnGenshinCloudChoosePath.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnGenshinCloudChoosePath.Name = "btnGenshinCloudChoosePath";
-            this.btnGenshinCloudChoosePath.Size = new System.Drawing.Size(51, 34);
+            this.btnGenshinCloudChoosePath.Size = new System.Drawing.Size(45, 28);
             this.btnGenshinCloudChoosePath.TabIndex = 34;
             this.btnGenshinCloudChoosePath.Text = "...";
             this.btnGenshinCloudChoosePath.UseVisualStyleBackColor = true;
@@ -412,10 +424,10 @@
             // 
             this.btnGenshinCloudDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinCloudDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinCloudDelete.Location = new System.Drawing.Point(392, 574);
-            this.btnGenshinCloudDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinCloudDelete.Location = new System.Drawing.Point(348, 478);
+            this.btnGenshinCloudDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnGenshinCloudDelete.Name = "btnGenshinCloudDelete";
-            this.btnGenshinCloudDelete.Size = new System.Drawing.Size(135, 36);
+            this.btnGenshinCloudDelete.Size = new System.Drawing.Size(120, 30);
             this.btnGenshinCloudDelete.TabIndex = 28;
             this.btnGenshinCloudDelete.Text = "删除选中账号";
             this.btnGenshinCloudDelete.UseVisualStyleBackColor = true;
@@ -424,9 +436,9 @@
             // 
             this.label11.AutoSize = true;
             this.label11.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label11.Location = new System.Drawing.Point(22, 99);
+            this.label11.Location = new System.Drawing.Point(20, 82);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(134, 18);
+            this.label11.Size = new System.Drawing.Size(112, 15);
             this.label11.TabIndex = 27;
             this.label11.Text = "保存账号列表：";
             // 
@@ -434,10 +446,10 @@
             // 
             this.btnGenshinCloudSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinCloudSwitch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinCloudSwitch.Location = new System.Drawing.Point(392, 120);
-            this.btnGenshinCloudSwitch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinCloudSwitch.Location = new System.Drawing.Point(348, 100);
+            this.btnGenshinCloudSwitch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnGenshinCloudSwitch.Name = "btnGenshinCloudSwitch";
-            this.btnGenshinCloudSwitch.Size = new System.Drawing.Size(135, 62);
+            this.btnGenshinCloudSwitch.Size = new System.Drawing.Size(120, 52);
             this.btnGenshinCloudSwitch.TabIndex = 26;
             this.btnGenshinCloudSwitch.Text = "切换选中账号";
             this.btnGenshinCloudSwitch.UseVisualStyleBackColor = true;
@@ -446,10 +458,10 @@
             // 
             this.btnGenshinCloudAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnGenshinCloudAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnGenshinCloudAdd.Location = new System.Drawing.Point(392, 530);
-            this.btnGenshinCloudAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGenshinCloudAdd.Location = new System.Drawing.Point(348, 442);
+            this.btnGenshinCloudAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnGenshinCloudAdd.Name = "btnGenshinCloudAdd";
-            this.btnGenshinCloudAdd.Size = new System.Drawing.Size(135, 36);
+            this.btnGenshinCloudAdd.Size = new System.Drawing.Size(120, 30);
             this.btnGenshinCloudAdd.TabIndex = 25;
             this.btnGenshinCloudAdd.Text = "保存当前账号";
             this.btnGenshinCloudAdd.UseVisualStyleBackColor = true;
@@ -463,10 +475,11 @@
             this.columnHeader1});
             this.lvwGenshinCloudAcct.GridLines = true;
             this.lvwGenshinCloudAcct.HideSelection = false;
-            this.lvwGenshinCloudAcct.Location = new System.Drawing.Point(21, 120);
+            this.lvwGenshinCloudAcct.Location = new System.Drawing.Point(19, 100);
+            this.lvwGenshinCloudAcct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvwGenshinCloudAcct.MultiSelect = false;
             this.lvwGenshinCloudAcct.Name = "lvwGenshinCloudAcct";
-            this.lvwGenshinCloudAcct.Size = new System.Drawing.Size(361, 493);
+            this.lvwGenshinCloudAcct.Size = new System.Drawing.Size(321, 412);
             this.lvwGenshinCloudAcct.TabIndex = 24;
             this.lvwGenshinCloudAcct.UseCompatibleStateImageBehavior = false;
             this.lvwGenshinCloudAcct.View = System.Windows.Forms.View.List;
@@ -474,18 +487,18 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "名称";
-            this.columnHeader1.Width = 273;
+            this.columnHeader1.Width = 200;
             // 
             // tabPageSatrRail
             // 
             this.tabPageSatrRail.BackColor = System.Drawing.Color.White;
             this.tabPageSatrRail.Controls.Add(this.groupBox3);
             this.tabPageSatrRail.Controls.Add(this.groupBox4);
-            this.tabPageSatrRail.Location = new System.Drawing.Point(4, 28);
-            this.tabPageSatrRail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabPageSatrRail.Location = new System.Drawing.Point(4, 25);
+            this.tabPageSatrRail.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.tabPageSatrRail.Name = "tabPageSatrRail";
-            this.tabPageSatrRail.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.tabPageSatrRail.Size = new System.Drawing.Size(566, 693);
+            this.tabPageSatrRail.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.tabPageSatrRail.Size = new System.Drawing.Size(454, 379);
             this.tabPageSatrRail.TabIndex = 2;
             this.tabPageSatrRail.Text = "崩坏：星穹铁道";
             // 
@@ -497,11 +510,11 @@
             this.groupBox3.Controls.Add(this.btnStarRailFPSEdit);
             this.groupBox3.Controls.Add(this.numericUpDownFPS);
             this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(12, 515);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox3.Location = new System.Drawing.Point(11, 429);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox3.Size = new System.Drawing.Size(534, 126);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox3.Size = new System.Drawing.Size(475, 105);
             this.groupBox3.TabIndex = 42;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "游戏设置";
@@ -510,10 +523,10 @@
             // 
             this.pictureBox2.Image = global::MiHoYoStarter.Properties.Resources.attention;
             this.pictureBox2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox2.Location = new System.Drawing.Point(291, 46);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Location = new System.Drawing.Point(259, 38);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox2.Size = new System.Drawing.Size(21, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 39;
             this.pictureBox2.TabStop = false;
@@ -522,10 +535,10 @@
             // 
             // btnStarRailFPSEdit
             // 
-            this.btnStarRailFPSEdit.Location = new System.Drawing.Point(392, 39);
-            this.btnStarRailFPSEdit.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStarRailFPSEdit.Location = new System.Drawing.Point(348, 32);
+            this.btnStarRailFPSEdit.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnStarRailFPSEdit.Name = "btnStarRailFPSEdit";
-            this.btnStarRailFPSEdit.Size = new System.Drawing.Size(112, 34);
+            this.btnStarRailFPSEdit.Size = new System.Drawing.Size(100, 28);
             this.btnStarRailFPSEdit.TabIndex = 3;
             this.btnStarRailFPSEdit.Text = "应用";
             this.btnStarRailFPSEdit.UseVisualStyleBackColor = true;
@@ -533,8 +546,8 @@
             // 
             // numericUpDownFPS
             // 
-            this.numericUpDownFPS.Location = new System.Drawing.Point(192, 44);
-            this.numericUpDownFPS.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.numericUpDownFPS.Location = new System.Drawing.Point(171, 37);
+            this.numericUpDownFPS.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.numericUpDownFPS.Maximum = new decimal(new int[] {
             200,
             0,
@@ -546,7 +559,7 @@
             0,
             0});
             this.numericUpDownFPS.Name = "numericUpDownFPS";
-            this.numericUpDownFPS.Size = new System.Drawing.Size(90, 29);
+            this.numericUpDownFPS.Size = new System.Drawing.Size(80, 25);
             this.numericUpDownFPS.TabIndex = 2;
             this.numericUpDownFPS.Value = new decimal(new int[] {
             120,
@@ -557,10 +570,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 46);
+            this.label6.Location = new System.Drawing.Point(20, 38);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(161, 18);
+            this.label6.Size = new System.Drawing.Size(136, 15);
             this.label6.TabIndex = 1;
             this.label6.Text = "游戏帧数（FPS）：";
             // 
@@ -583,21 +596,35 @@
             this.groupBox4.Controls.Add(this.btnStarRailSwitch);
             this.groupBox4.Controls.Add(this.btnStarRailAdd);
             this.groupBox4.Controls.Add(this.lvwStarRailAcct);
-            this.groupBox4.Location = new System.Drawing.Point(12, 9);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox4.Location = new System.Drawing.Point(11, 8);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox4.Size = new System.Drawing.Size(536, 479);
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox4.Size = new System.Drawing.Size(476, 399);
             this.groupBox4.TabIndex = 41;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "账号切换";
             // 
+            // comboStarRailServer
+            // 
+            this.comboStarRailServer.FormattingEnabled = true;
+            this.comboStarRailServer.Items.AddRange(new object[] {
+            "國服",
+            "國際服"});
+            this.comboStarRailServer.Location = new System.Drawing.Point(359, 22);
+            this.comboStarRailServer.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboStarRailServer.Name = "comboStarRailServer";
+            this.comboStarRailServer.Size = new System.Drawing.Size(108, 23);
+            this.comboStarRailServer.TabIndex = 43;
+            this.comboStarRailServer.Text = "國際服";
+            this.comboStarRailServer.SelectedIndexChanged += new System.EventHandler(this.comboStarRailServer_SelectedIndexChanged);
+            // 
             // btnStarRailStart
             // 
-            this.btnStarRailStart.Location = new System.Drawing.Point(394, 273);
-            this.btnStarRailStart.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStarRailStart.Location = new System.Drawing.Point(350, 228);
+            this.btnStarRailStart.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnStarRailStart.Name = "btnStarRailStart";
-            this.btnStarRailStart.Size = new System.Drawing.Size(132, 34);
+            this.btnStarRailStart.Size = new System.Drawing.Size(117, 28);
             this.btnStarRailStart.TabIndex = 42;
             this.btnStarRailStart.Text = "启动游戏";
             this.btnStarRailStart.UseVisualStyleBackColor = true;
@@ -606,9 +633,10 @@
             // 
             this.chkStarRailAutoStart.AutoSize = true;
             this.chkStarRailAutoStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkStarRailAutoStart.Location = new System.Drawing.Point(394, 345);
+            this.chkStarRailAutoStart.Location = new System.Drawing.Point(350, 288);
+            this.chkStarRailAutoStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkStarRailAutoStart.Name = "chkStarRailAutoStart";
-            this.chkStarRailAutoStart.Size = new System.Drawing.Size(124, 22);
+            this.chkStarRailAutoStart.Size = new System.Drawing.Size(104, 19);
             this.chkStarRailAutoStart.TabIndex = 41;
             this.chkStarRailAutoStart.Text = "切换时重启";
             this.chkStarRailAutoStart.UseVisualStyleBackColor = true;
@@ -617,10 +645,10 @@
             // 
             this.pictureBox1.Image = global::MiHoYoStarter.Properties.Resources.attention;
             this.pictureBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox1.Location = new System.Drawing.Point(114, 100);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Location = new System.Drawing.Point(101, 83);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox1.Size = new System.Drawing.Size(21, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 38;
             this.pictureBox1.TabStop = false;
@@ -631,10 +659,10 @@
             // 
             this.label7.AutoSize = true;
             this.label7.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label7.Location = new System.Drawing.Point(22, 104);
+            this.label7.Location = new System.Drawing.Point(20, 87);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(98, 18);
+            this.label7.Size = new System.Drawing.Size(82, 15);
             this.label7.TabIndex = 37;
             this.label7.Text = "启动参数：";
             // 
@@ -642,30 +670,30 @@
             // 
             this.txtStarRailStartParam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStarRailStartParam.Location = new System.Drawing.Point(21, 126);
-            this.txtStarRailStartParam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStarRailStartParam.Location = new System.Drawing.Point(19, 105);
+            this.txtStarRailStartParam.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtStarRailStartParam.Name = "txtStarRailStartParam";
-            this.txtStarRailStartParam.Size = new System.Drawing.Size(504, 29);
+            this.txtStarRailStartParam.Size = new System.Drawing.Size(448, 25);
             this.txtStarRailStartParam.TabIndex = 36;
             // 
             // txtStarRailPath
             // 
             this.txtStarRailPath.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtStarRailPath.Location = new System.Drawing.Point(21, 63);
-            this.txtStarRailPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtStarRailPath.Location = new System.Drawing.Point(19, 52);
+            this.txtStarRailPath.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtStarRailPath.Name = "txtStarRailPath";
-            this.txtStarRailPath.Size = new System.Drawing.Size(444, 29);
+            this.txtStarRailPath.Size = new System.Drawing.Size(395, 25);
             this.txtStarRailPath.TabIndex = 33;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label8.Location = new System.Drawing.Point(22, 40);
+            this.label8.Location = new System.Drawing.Point(20, 33);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(296, 18);
+            this.label8.Size = new System.Drawing.Size(247, 15);
             this.label8.TabIndex = 32;
             this.label8.Text = "【崩坏：星穹铁道】游戏程序路径：";
             // 
@@ -673,10 +701,10 @@
             // 
             this.btnStarRailChoosePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailChoosePath.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStarRailChoosePath.Location = new System.Drawing.Point(476, 60);
-            this.btnStarRailChoosePath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStarRailChoosePath.Location = new System.Drawing.Point(423, 50);
+            this.btnStarRailChoosePath.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnStarRailChoosePath.Name = "btnStarRailChoosePath";
-            this.btnStarRailChoosePath.Size = new System.Drawing.Size(51, 34);
+            this.btnStarRailChoosePath.Size = new System.Drawing.Size(45, 28);
             this.btnStarRailChoosePath.TabIndex = 34;
             this.btnStarRailChoosePath.Text = "...";
             this.btnStarRailChoosePath.UseVisualStyleBackColor = true;
@@ -685,10 +713,10 @@
             // 
             this.btnStarRailDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailDelete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStarRailDelete.Location = new System.Drawing.Point(392, 422);
-            this.btnStarRailDelete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStarRailDelete.Location = new System.Drawing.Point(348, 352);
+            this.btnStarRailDelete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnStarRailDelete.Name = "btnStarRailDelete";
-            this.btnStarRailDelete.Size = new System.Drawing.Size(135, 36);
+            this.btnStarRailDelete.Size = new System.Drawing.Size(120, 30);
             this.btnStarRailDelete.TabIndex = 28;
             this.btnStarRailDelete.Text = "删除选中账号";
             this.btnStarRailDelete.UseVisualStyleBackColor = true;
@@ -697,9 +725,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label10.Location = new System.Drawing.Point(22, 182);
+            this.label10.Location = new System.Drawing.Point(20, 152);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(134, 18);
+            this.label10.Size = new System.Drawing.Size(112, 15);
             this.label10.TabIndex = 27;
             this.label10.Text = "保存账号列表：";
             // 
@@ -707,10 +735,10 @@
             // 
             this.btnStarRailSwitch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailSwitch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStarRailSwitch.Location = new System.Drawing.Point(393, 202);
-            this.btnStarRailSwitch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStarRailSwitch.Location = new System.Drawing.Point(349, 168);
+            this.btnStarRailSwitch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnStarRailSwitch.Name = "btnStarRailSwitch";
-            this.btnStarRailSwitch.Size = new System.Drawing.Size(135, 62);
+            this.btnStarRailSwitch.Size = new System.Drawing.Size(120, 52);
             this.btnStarRailSwitch.TabIndex = 26;
             this.btnStarRailSwitch.Text = "切换选中账号";
             this.btnStarRailSwitch.UseVisualStyleBackColor = true;
@@ -719,10 +747,10 @@
             // 
             this.btnStarRailAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnStarRailAdd.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnStarRailAdd.Location = new System.Drawing.Point(392, 376);
-            this.btnStarRailAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnStarRailAdd.Location = new System.Drawing.Point(348, 313);
+            this.btnStarRailAdd.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnStarRailAdd.Name = "btnStarRailAdd";
-            this.btnStarRailAdd.Size = new System.Drawing.Size(135, 36);
+            this.btnStarRailAdd.Size = new System.Drawing.Size(120, 30);
             this.btnStarRailAdd.TabIndex = 25;
             this.btnStarRailAdd.Text = "保存当前账号";
             this.btnStarRailAdd.UseVisualStyleBackColor = true;
@@ -736,10 +764,11 @@
             this.columnHeader2});
             this.lvwStarRailAcct.GridLines = true;
             this.lvwStarRailAcct.HideSelection = false;
-            this.lvwStarRailAcct.Location = new System.Drawing.Point(21, 202);
+            this.lvwStarRailAcct.Location = new System.Drawing.Point(19, 168);
+            this.lvwStarRailAcct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvwStarRailAcct.MultiSelect = false;
             this.lvwStarRailAcct.Name = "lvwStarRailAcct";
-            this.lvwStarRailAcct.Size = new System.Drawing.Size(361, 255);
+            this.lvwStarRailAcct.Size = new System.Drawing.Size(321, 213);
             this.lvwStarRailAcct.TabIndex = 24;
             this.lvwStarRailAcct.UseCompatibleStateImageBehavior = false;
             this.lvwStarRailAcct.View = System.Windows.Forms.View.List;
@@ -747,15 +776,16 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "名称";
-            this.columnHeader2.Width = 273;
+            this.columnHeader2.Width = 200;
             // 
             // tabPageHonkaiImpact3
             // 
             this.tabPageHonkaiImpact3.BackColor = System.Drawing.Color.White;
             this.tabPageHonkaiImpact3.Controls.Add(this.groupBox2);
-            this.tabPageHonkaiImpact3.Location = new System.Drawing.Point(4, 28);
+            this.tabPageHonkaiImpact3.Location = new System.Drawing.Point(4, 25);
+            this.tabPageHonkaiImpact3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageHonkaiImpact3.Name = "tabPageHonkaiImpact3";
-            this.tabPageHonkaiImpact3.Size = new System.Drawing.Size(566, 693);
+            this.tabPageHonkaiImpact3.Size = new System.Drawing.Size(454, 379);
             this.tabPageHonkaiImpact3.TabIndex = 3;
             this.tabPageHonkaiImpact3.Text = "崩坏3";
             // 
@@ -776,11 +806,11 @@
             this.groupBox2.Controls.Add(this.btnHonkaiImpact3Switch);
             this.groupBox2.Controls.Add(this.btnHonkaiImpact3Add);
             this.groupBox2.Controls.Add(this.lvwHonkaiImpact3Acct);
-            this.groupBox2.Location = new System.Drawing.Point(12, 9);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Location = new System.Drawing.Point(11, 8);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.groupBox2.Size = new System.Drawing.Size(536, 635);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.groupBox2.Size = new System.Drawing.Size(476, 529);
             this.groupBox2.TabIndex = 40;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "账号切换";
@@ -789,9 +819,10 @@
             // 
             this.chkHonkaiImpact3AutoStart.AutoSize = true;
             this.chkHonkaiImpact3AutoStart.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.chkHonkaiImpact3AutoStart.Location = new System.Drawing.Point(394, 498);
+            this.chkHonkaiImpact3AutoStart.Location = new System.Drawing.Point(350, 415);
+            this.chkHonkaiImpact3AutoStart.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.chkHonkaiImpact3AutoStart.Name = "chkHonkaiImpact3AutoStart";
-            this.chkHonkaiImpact3AutoStart.Size = new System.Drawing.Size(124, 22);
+            this.chkHonkaiImpact3AutoStart.Size = new System.Drawing.Size(104, 19);
             this.chkHonkaiImpact3AutoStart.TabIndex = 41;
             this.chkHonkaiImpact3AutoStart.Text = "切换时重启";
             this.chkHonkaiImpact3AutoStart.UseVisualStyleBackColor = true;
@@ -800,10 +831,10 @@
             // 
             this.pictureBox3.Image = global::MiHoYoStarter.Properties.Resources.attention;
             this.pictureBox3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.pictureBox3.Location = new System.Drawing.Point(114, 100);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(101, 83);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(24, 24);
+            this.pictureBox3.Size = new System.Drawing.Size(21, 20);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 38;
             this.pictureBox3.TabStop = false;
@@ -814,10 +845,10 @@
             // 
             this.label3.AutoSize = true;
             this.label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label3.Location = new System.Drawing.Point(22, 104);
+            this.label3.Location = new System.Drawing.Point(20, 87);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(98, 18);
+            this.label3.Size = new System.Drawing.Size(82, 15);
             this.label3.TabIndex = 37;
             this.label3.Text = "启动参数：";
             // 
@@ -825,30 +856,30 @@
             // 
             this.txtHonkaiImpact3StartParam.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHonkaiImpact3StartParam.Location = new System.Drawing.Point(21, 126);
-            this.txtHonkaiImpact3StartParam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHonkaiImpact3StartParam.Location = new System.Drawing.Point(19, 105);
+            this.txtHonkaiImpact3StartParam.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtHonkaiImpact3StartParam.Name = "txtHonkaiImpact3StartParam";
-            this.txtHonkaiImpact3StartParam.Size = new System.Drawing.Size(504, 29);
+            this.txtHonkaiImpact3StartParam.Size = new System.Drawing.Size(448, 25);
             this.txtHonkaiImpact3StartParam.TabIndex = 36;
             // 
             // txtHonkaiImpact3Path
             // 
             this.txtHonkaiImpact3Path.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtHonkaiImpact3Path.Location = new System.Drawing.Point(21, 63);
-            this.txtHonkaiImpact3Path.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtHonkaiImpact3Path.Location = new System.Drawing.Point(19, 52);
+            this.txtHonkaiImpact3Path.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtHonkaiImpact3Path.Name = "txtHonkaiImpact3Path";
-            this.txtHonkaiImpact3Path.Size = new System.Drawing.Size(444, 29);
+            this.txtHonkaiImpact3Path.Size = new System.Drawing.Size(395, 25);
             this.txtHonkaiImpact3Path.TabIndex = 33;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label4.Location = new System.Drawing.Point(22, 40);
+            this.label4.Location = new System.Drawing.Point(20, 33);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 18);
+            this.label4.Size = new System.Drawing.Size(180, 15);
             this.label4.TabIndex = 32;
             this.label4.Text = "【崩坏3】游戏程序路径：";
             // 
@@ -856,10 +887,10 @@
             // 
             this.btnHonkaiImpact3ChoosePath.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHonkaiImpact3ChoosePath.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnHonkaiImpact3ChoosePath.Location = new System.Drawing.Point(476, 60);
-            this.btnHonkaiImpact3ChoosePath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHonkaiImpact3ChoosePath.Location = new System.Drawing.Point(423, 50);
+            this.btnHonkaiImpact3ChoosePath.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnHonkaiImpact3ChoosePath.Name = "btnHonkaiImpact3ChoosePath";
-            this.btnHonkaiImpact3ChoosePath.Size = new System.Drawing.Size(51, 34);
+            this.btnHonkaiImpact3ChoosePath.Size = new System.Drawing.Size(45, 28);
             this.btnHonkaiImpact3ChoosePath.TabIndex = 34;
             this.btnHonkaiImpact3ChoosePath.Text = "...";
             this.btnHonkaiImpact3ChoosePath.UseVisualStyleBackColor = true;
@@ -868,10 +899,10 @@
             // 
             this.btnHonkaiImpact3Delete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHonkaiImpact3Delete.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnHonkaiImpact3Delete.Location = new System.Drawing.Point(392, 574);
-            this.btnHonkaiImpact3Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHonkaiImpact3Delete.Location = new System.Drawing.Point(348, 478);
+            this.btnHonkaiImpact3Delete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnHonkaiImpact3Delete.Name = "btnHonkaiImpact3Delete";
-            this.btnHonkaiImpact3Delete.Size = new System.Drawing.Size(135, 36);
+            this.btnHonkaiImpact3Delete.Size = new System.Drawing.Size(120, 30);
             this.btnHonkaiImpact3Delete.TabIndex = 28;
             this.btnHonkaiImpact3Delete.Text = "删除选中账号";
             this.btnHonkaiImpact3Delete.UseVisualStyleBackColor = true;
@@ -880,9 +911,9 @@
             // 
             this.label9.AutoSize = true;
             this.label9.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.label9.Location = new System.Drawing.Point(22, 182);
+            this.label9.Location = new System.Drawing.Point(20, 152);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 18);
+            this.label9.Size = new System.Drawing.Size(112, 15);
             this.label9.TabIndex = 27;
             this.label9.Text = "保存账号列表：";
             // 
@@ -890,10 +921,10 @@
             // 
             this.btnHonkaiImpact3Switch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHonkaiImpact3Switch.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnHonkaiImpact3Switch.Location = new System.Drawing.Point(393, 202);
-            this.btnHonkaiImpact3Switch.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHonkaiImpact3Switch.Location = new System.Drawing.Point(349, 168);
+            this.btnHonkaiImpact3Switch.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnHonkaiImpact3Switch.Name = "btnHonkaiImpact3Switch";
-            this.btnHonkaiImpact3Switch.Size = new System.Drawing.Size(135, 62);
+            this.btnHonkaiImpact3Switch.Size = new System.Drawing.Size(120, 52);
             this.btnHonkaiImpact3Switch.TabIndex = 26;
             this.btnHonkaiImpact3Switch.Text = "切换选中账号";
             this.btnHonkaiImpact3Switch.UseVisualStyleBackColor = true;
@@ -902,10 +933,10 @@
             // 
             this.btnHonkaiImpact3Add.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHonkaiImpact3Add.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.btnHonkaiImpact3Add.Location = new System.Drawing.Point(392, 530);
-            this.btnHonkaiImpact3Add.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnHonkaiImpact3Add.Location = new System.Drawing.Point(348, 442);
+            this.btnHonkaiImpact3Add.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnHonkaiImpact3Add.Name = "btnHonkaiImpact3Add";
-            this.btnHonkaiImpact3Add.Size = new System.Drawing.Size(135, 36);
+            this.btnHonkaiImpact3Add.Size = new System.Drawing.Size(120, 30);
             this.btnHonkaiImpact3Add.TabIndex = 25;
             this.btnHonkaiImpact3Add.Text = "保存当前账号";
             this.btnHonkaiImpact3Add.UseVisualStyleBackColor = true;
@@ -919,10 +950,11 @@
             this.columnHeader3});
             this.lvwHonkaiImpact3Acct.GridLines = true;
             this.lvwHonkaiImpact3Acct.HideSelection = false;
-            this.lvwHonkaiImpact3Acct.Location = new System.Drawing.Point(21, 202);
+            this.lvwHonkaiImpact3Acct.Location = new System.Drawing.Point(19, 168);
+            this.lvwHonkaiImpact3Acct.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lvwHonkaiImpact3Acct.MultiSelect = false;
             this.lvwHonkaiImpact3Acct.Name = "lvwHonkaiImpact3Acct";
-            this.lvwHonkaiImpact3Acct.Size = new System.Drawing.Size(361, 411);
+            this.lvwHonkaiImpact3Acct.Size = new System.Drawing.Size(321, 343);
             this.lvwHonkaiImpact3Acct.TabIndex = 24;
             this.lvwHonkaiImpact3Acct.UseCompatibleStateImageBehavior = false;
             this.lvwHonkaiImpact3Acct.View = System.Windows.Forms.View.List;
@@ -930,19 +962,18 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "名称";
-            this.columnHeader3.Width = 273;
+            this.columnHeader3.Width = 200;
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.设置ToolStripMenuItem,
             this.帮助ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(6, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(574, 31);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(5, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(462, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -954,7 +985,7 @@
             this.DisplayStarRailTabToolStripMenuItem,
             this.DisplayHonkaiImpact3TabToolStripMenuItem});
             this.设置ToolStripMenuItem.Name = "设置ToolStripMenuItem";
-            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(98, 27);
+            this.设置ToolStripMenuItem.Size = new System.Drawing.Size(83, 24);
             this.设置ToolStripMenuItem.Text = "界面显示";
             // 
             // DisplayGenshinTabToolStripMenuItem
@@ -962,7 +993,7 @@
             this.DisplayGenshinTabToolStripMenuItem.Checked = true;
             this.DisplayGenshinTabToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.DisplayGenshinTabToolStripMenuItem.Name = "DisplayGenshinTabToolStripMenuItem";
-            this.DisplayGenshinTabToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.DisplayGenshinTabToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.DisplayGenshinTabToolStripMenuItem.Text = "原神";
             this.DisplayGenshinTabToolStripMenuItem.Click += new System.EventHandler(this.DisplayGenshinTabToolStripMenuItem_Click);
             // 
@@ -971,7 +1002,7 @@
             this.DisplayGenshinCloudTabToolStripMenuItem.Checked = true;
             this.DisplayGenshinCloudTabToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.DisplayGenshinCloudTabToolStripMenuItem.Name = "DisplayGenshinCloudTabToolStripMenuItem";
-            this.DisplayGenshinCloudTabToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.DisplayGenshinCloudTabToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.DisplayGenshinCloudTabToolStripMenuItem.Text = "云·原神";
             this.DisplayGenshinCloudTabToolStripMenuItem.Click += new System.EventHandler(this.DisplayGenshinCloudTabToolStripMenuItem_Click);
             // 
@@ -980,7 +1011,7 @@
             this.DisplayStarRailTabToolStripMenuItem.Checked = true;
             this.DisplayStarRailTabToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.DisplayStarRailTabToolStripMenuItem.Name = "DisplayStarRailTabToolStripMenuItem";
-            this.DisplayStarRailTabToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.DisplayStarRailTabToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.DisplayStarRailTabToolStripMenuItem.Text = "崩坏：星穹铁道";
             this.DisplayStarRailTabToolStripMenuItem.Click += new System.EventHandler(this.DisplayStarRailTabToolStripMenuItem_Click);
             // 
@@ -989,7 +1020,7 @@
             this.DisplayHonkaiImpact3TabToolStripMenuItem.Checked = true;
             this.DisplayHonkaiImpact3TabToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.DisplayHonkaiImpact3TabToolStripMenuItem.Name = "DisplayHonkaiImpact3TabToolStripMenuItem";
-            this.DisplayHonkaiImpact3TabToolStripMenuItem.Size = new System.Drawing.Size(236, 34);
+            this.DisplayHonkaiImpact3TabToolStripMenuItem.Size = new System.Drawing.Size(197, 26);
             this.DisplayHonkaiImpact3TabToolStripMenuItem.Text = "崩坏3";
             this.DisplayHonkaiImpact3TabToolStripMenuItem.Click += new System.EventHandler(this.DisplayHonkaiImpact3TabToolStripMenuItem_Click);
             // 
@@ -999,20 +1030,20 @@
             this.主页ToolStripMenuItem,
             this.请作者喝咖啡ToolStripMenuItem});
             this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(62, 27);
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(53, 24);
             this.帮助ToolStripMenuItem.Text = "帮助";
             // 
             // 主页ToolStripMenuItem
             // 
             this.主页ToolStripMenuItem.Name = "主页ToolStripMenuItem";
-            this.主页ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.主页ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.主页ToolStripMenuItem.Text = "主页";
             this.主页ToolStripMenuItem.Click += new System.EventHandler(this.主页ToolStripMenuItem_Click);
             // 
             // 请作者喝咖啡ToolStripMenuItem
             // 
             this.请作者喝咖啡ToolStripMenuItem.Name = "请作者喝咖啡ToolStripMenuItem";
-            this.请作者喝咖啡ToolStripMenuItem.Size = new System.Drawing.Size(218, 34);
+            this.请作者喝咖啡ToolStripMenuItem.Size = new System.Drawing.Size(182, 26);
             this.请作者喝咖啡ToolStripMenuItem.Text = "请作者喝咖啡";
             this.请作者喝咖啡ToolStripMenuItem.Click += new System.EventHandler(this.请作者喝咖啡ToolStripMenuItem_Click);
             // 
@@ -1022,7 +1053,9 @@
             this.notifyIcon.Icon = global::MiHoYoStarter.Properties.Resources.hutao;
             this.notifyIcon.Text = "米哈游账户切换启动工具";
             this.notifyIcon.Visible = true;
+            this.notifyIcon.Click += new System.EventHandler(this.notifyIcon_Click);
             this.notifyIcon.DoubleClick += new System.EventHandler(this.notifyIcon_DoubleClick);
+            this.notifyIcon.MouseDown += new System.Windows.Forms.MouseEventHandler(this.notifyIcon_MouseDown);
             // 
             // contextMenuStrip1
             // 
@@ -1031,19 +1064,19 @@
             this.显示主界面ToolStripMenuItem,
             this.退出ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(171, 64);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(154, 52);
             // 
             // 显示主界面ToolStripMenuItem
             // 
             this.显示主界面ToolStripMenuItem.Name = "显示主界面ToolStripMenuItem";
-            this.显示主界面ToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
+            this.显示主界面ToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.显示主界面ToolStripMenuItem.Text = "显示主界面";
             this.显示主界面ToolStripMenuItem.Click += new System.EventHandler(this.显示主界面ToolStripMenuItem_Click);
             // 
             // 退出ToolStripMenuItem
             // 
             this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
-            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(153, 24);
             this.退出ToolStripMenuItem.Text = "退出";
             this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
             // 
@@ -1052,42 +1085,29 @@
             this.statusStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 734);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 414);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusStrip1.Size = new System.Drawing.Size(574, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(2, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(462, 22);
             this.statusStrip1.TabIndex = 2;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 15);
-            // 
-            // comboStarRailServer
-            // 
-            this.comboStarRailServer.FormattingEnabled = true;
-            this.comboStarRailServer.Items.AddRange(new object[] {
-            "國服",
-            "國際服"});
-            this.comboStarRailServer.Location = new System.Drawing.Point(404, 27);
-            this.comboStarRailServer.Name = "comboStarRailServer";
-            this.comboStarRailServer.Size = new System.Drawing.Size(121, 26);
-            this.comboStarRailServer.TabIndex = 43;
-            this.comboStarRailServer.Text = "國際服";
-            this.comboStarRailServer.SelectedIndexChanged += new System.EventHandler(this.comboStarRailServer_SelectedIndexChanged);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 16);
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 756);
+            this.ClientSize = new System.Drawing.Size(462, 436);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.tab1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = global::MiHoYoStarter.Properties.Resources.hutao;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "FormMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MHY启动器";
